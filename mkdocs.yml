@@ -1,0 +1,16 @@
+﻿site_name: EN ↔ ET andmevaldkonna sõnastik
+site_description: Avalik EN ↔ ET andmevaldkonna mõistete sõnastik
+site_url: https://example.github.io/terminoloogia/
+repo_name: your-org/terminoloogia
+repo_url: https://github.com/your-org/terminoloogia
+
+theme:
+  name: material
+  language: et
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Contributing: contributing.md

@@ -1,0 +1,54 @@
+﻿- en: "data warehouse"
+  et: "andmeladu"
+  alt:
+    et: ["andmeait"]
+    en: []
+  definition: "Struktureeritud andmete keskne hoidla analüüsi ja aruandluse jaoks."
+  references:
+    - title: "Wikipedia: Data warehouse"
+      url: "https://en.wikipedia.org/wiki/Data_warehouse"
+  example: "Andmeladu koondab müügiandmed eri süsteemidest ühte analüüsikihti."
+
+- en: "data lake"
+  et: "andmejärv"
+  alt:
+    et: []
+    en: []
+  definition: "Toor- ja poolstruktureeritud andmete hoidla, kus skeem rakendub lugemisel."
+  references:
+    - title: "Wikipedia: Data lake"
+      url: "https://en.wikipedia.org/wiki/Data_lake"
+  example: "Andmejärv võimaldab talletada IoT toorvooge enne modelleerimist."
+
+- en: "feature engineering"
+  et: "tunnuste loomine"
+  alt:
+    et: ["tunnuste konstrueerimine"]
+    en: []
+  definition: "Masinõppes sisendtunnuste loomine ja teisendamine mudeli kvaliteedi parandamiseks."
+  references:
+    - title: "Wikipedia: Feature engineering"
+      url: "https://en.wikipedia.org/wiki/Feature_engineering"
+  example: "Tunnuste loomine lisas kuupäevast nädalapäeva ja hooajalisuse tunnused."
+
+- en: "dimensional model"
+  et: "dimensioonimudel"
+  alt:
+    et: ["dimensiooniline mudel"]
+    en: []
+  definition: "Andmeladude modelleerimisviis fakt- ja dimensioonitabelitega."
+  references:
+    - title: "Wikipedia: Dimensional modeling"
+      url: "https://en.wikipedia.org/wiki/Dimensional_modeling"
+  example: "Dimensioonimudel lihtsustab BI raportite päringuid."
+
+- en: "slowly changing dimension"
+  et: "aeglaselt muutuv dimensioon"
+  alt:
+    et: []
+    en: ["SCD"]
+  definition: "Dimensioon, mille väärtused muutuvad ajas harva ja vajavad versioonihaldust."
+  references:
+    - title: "Kimball Group"
+      url: "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/slowly-changing-dimensions/"
+  example: "Kliendi aadressi muutus salvestatakse SCD Type 2 loogikaga."
