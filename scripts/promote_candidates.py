@@ -153,6 +153,28 @@ def main() -> None:
                 "en": [],
             },
         }
+
+        # Carry over thesis references if available
+        sample_theses = candidate.get("sample_theses", [])
+        if sample_theses:
+            theses = []
+            for thesis in sample_theses:
+                t: dict = {}
+                if thesis.get("author"):
+                    t["author"] = thesis["author"]
+                if thesis.get("title_et"):
+                    t["title_et"] = thesis["title_et"]
+                if thesis.get("title_en"):
+                    t["title_en"] = thesis["title_en"]
+                if thesis.get("year"):
+                    t["year"] = thesis["year"]
+                if thesis.get("url"):
+                    t["url"] = thesis["url"]
+                if t:
+                    theses.append(t)
+            if theses:
+                entry["theses"] = theses
+
         current_entries.append(entry)
         existing.add(en.lower())
 

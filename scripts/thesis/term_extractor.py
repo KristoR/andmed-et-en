@@ -125,11 +125,24 @@ def extract_curated_terms(
                     category=ref_term.category if ref_term else "",
                 )
             results[key].frequency += 1
-            # Keep up to 3 sample thesis references
-            if len(results[key].thesis_refs) < 3:
-                title = record.titles[0] if record.titles else "(untitled)"
+            # Keep up to 5 sample thesis references
+            if len(results[key].thesis_refs) < 5:
+                # Extract last name from first author
+                author = ""
+                if record.authors:
+                    raw = record.authors[0]
+                    # Handle "Last, First" format
+                    if "," in raw:
+                        author = raw.split(",")[0].strip()
+                    else:
+                        # "First Last" — take last word
+                        parts = raw.strip().split()
+                        author = parts[-1] if parts else ""
                 results[key].thesis_refs.append({
-                    "title": title,
+                    "author": author,
+                    "title_et": record.title_et,
+                    "title_en": record.title_en,
+                    "year": record.year,
                     "url": record.url,
                     "university": record.university,
                 })
@@ -208,10 +221,20 @@ def extract_nlp_terms(
             phrase_thesis_count[phrase] += 1
             if phrase not in phrase_thesis_refs:
                 phrase_thesis_refs[phrase] = []
-            if len(phrase_thesis_refs[phrase]) < 3:
-                title = record.titles[0] if record.titles else "(untitled)"
+            if len(phrase_thesis_refs[phrase]) < 5:
+                author = ""
+                if record.authors:
+                    raw = record.authors[0]
+                    if "," in raw:
+                        author = raw.split(",")[0].strip()
+                    else:
+                        parts = raw.strip().split()
+                        author = parts[-1] if parts else ""
                 phrase_thesis_refs[phrase].append({
-                    "title": title,
+                    "author": author,
+                    "title_et": record.title_et,
+                    "title_en": record.title_en,
+                    "year": record.year,
                     "url": record.url,
                     "university": record.university,
                 })

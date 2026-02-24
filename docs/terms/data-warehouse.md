@@ -26,7 +26,6 @@ Struktureeritud andmete keskne hoidla analüüsi ja aruandluse jaoks.
 
 Andmeladu koondab müügiandmed eri süsteemidest ühte analüüsikihti.
 
-## Arutelu
+---
 
-- Ava vaidluse korral teema [GitHub Discussionsis](../contributing.md#vaidlused-ja-github-discussions).
-- Soovituslik pealkiri: `Term: data warehouse / andmeladu`
+[Soovita muudatust](https://github.com/KristoR/andmed-et-en/discussions/new?category=terminid&title=Term%3A+data+warehouse+%2F+andmeladu&body=%23%23+Termin%0A%0A-+%2A%2AEN%2A%2A%3A+data+warehouse%0A-+%2A%2AET%2A%2A%3A+andmeladu%0A%0A%23%23+Ettepanek%0A%0AKirjelda+siia+oma+ettepanekut+%28uus+t%C3%B5lge%2C+alternatiiv%2C+definitsioon%2C+parandus+jne%29.%0A%0A%23%23+Viited%0A%0ALisa+viited%2C+mis+toetavad+ettepanekut.%0A){ .md-button .md-button--primary }

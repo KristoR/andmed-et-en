@@ -27,10 +27,14 @@ class ThesisRecord:
 
     identifier: str
     titles: list[str] = field(default_factory=list)
+    title_en: str = ""
+    title_et: str = ""
+    authors: list[str] = field(default_factory=list)
     abstract_en: str = ""
     abstract_et: str = ""
     subjects: list[str] = field(default_factory=list)
     date: str = ""
+    year: str = ""
     thesis_type: str = ""
     url: str = ""
     university: str = ""
@@ -92,9 +96,22 @@ def parse_record(record_el: etree._Element, university: str = "") -> ThesisRecor
 
     record = ThesisRecord(identifier=identifier, university=university)
 
-    # Titles
-    for title_text, _ in _extract_text(metadata.findall("dc:title", NS)):
+    # Authors (dc:creator) — typically "Last, First" or "First Last"
+    for creator_el in metadata.findall("dc:creator", NS):
+        if creator_el.text and creator_el.text.strip():
+            record.authors.append(creator_el.text.strip())
+
+    # Titles — split by language
+    title_pairs = _extract_text(metadata.findall("dc:title", NS))
+    for title_text, lang in title_pairs:
         record.titles.append(title_text)
+        if lang.startswith("et") and not record.title_et:
+            record.title_et = title_text
+        elif not record.title_en:
+            record.title_en = title_text
+    # If only one title and no language detected, assign to both
+    if len(record.titles) == 1 and not record.title_en and not record.title_et:
+        record.title_en = record.titles[0]
 
     # Descriptions (abstracts) — split by language
     descriptions = _extract_text(metadata.findall("dc:description", NS))
@@ -119,11 +136,15 @@ def parse_record(record_el: etree._Element, university: str = "") -> ThesisRecor
             if part:
                 record.subjects.append(part)
 
-    # Date — take the first one
+    # Date — take the first one, also extract year
     dates = metadata.findall("dc:date", NS)
     for date_el in dates:
         if date_el.text and date_el.text.strip():
             record.date = date_el.text.strip()
+            # Extract 4-digit year
+            year_match = re.search(r"\b(19|20)\d{2}\b", record.date)
+            if year_match:
+                record.year = year_match.group(0)
             break
 
     # Type

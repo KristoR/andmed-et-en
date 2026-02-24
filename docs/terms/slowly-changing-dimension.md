@@ -26,7 +26,6 @@ Dimensioon, mille väärtused muutuvad ajas harva ja vajavad versioonihaldust.
 
 Kliendi aadressi muutus salvestatakse SCD Type 2 loogikaga.
 
-## Arutelu
+---
 
-- Ava vaidluse korral teema [GitHub Discussionsis](../contributing.md#vaidlused-ja-github-discussions).
-- Soovituslik pealkiri: `Term: slowly changing dimension / aeglaselt muutuv dimensioon`
+[Soovita muudatust](https://github.com/KristoR/andmed-et-en/discussions/new?category=terminid&title=Term%3A+slowly+changing+dimension+%2F+aeglaselt+muutuv+dimensioon&body=%23%23+Termin%0A%0A-+%2A%2AEN%2A%2A%3A+slowly+changing+dimension%0A-+%2A%2AET%2A%2A%3A+aeglaselt+muutuv+dimensioon%0A%0A%23%23+Ettepanek%0A%0AKirjelda+siia+oma+ettepanekut+%28uus+t%C3%B5lge%2C+alternatiiv%2C+definitsioon%2C+parandus+jne%29.%0A%0A%23%23+Viited%0A%0ALisa+viited%2C+mis+toetavad+ettepanekut.%0A){ .md-button .md-button--primary }
