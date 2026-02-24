@@ -26,7 +26,6 @@ Puudub
 
 Puudub
 
-## Arutelu
+---
 
-- Ava vaidluse korral teema [GitHub Discussionsis](../contributing.md#vaidlused-ja-github-discussions).
-- Soovituslik pealkiri: `Term: dimensionality reduction / dimensionaalsuse vähendamine`
+[Soovita muudatust](https://github.com/KristoR/andmed-et-en/discussions/new?category=terminid&title=Term%3A+dimensionality+reduction+%2F+dimensionaalsuse+v%C3%A4hendamine&body=%23%23+Termin%0A%0A-+%2A%2AEN%2A%2A%3A+dimensionality+reduction%0A-+%2A%2AET%2A%2A%3A+dimensionaalsuse+v%C3%A4hendamine%0A%0A%23%23+Ettepanek%0A%0AKirjelda+siia+oma+ettepanekut+%28uus+t%C3%B5lge%2C+alternatiiv%2C+definitsioon%2C+parandus+jne%29.%0A%0A%23%23+Viited%0A%0ALisa+viited%2C+mis+toetavad+ettepanekut.%0A){ .md-button .md-button--primary }

@@ -1,16 +1,24 @@
-﻿site_name: EN ↔ ET andmevaldkonna sõnastik
+site_name: EN ↔ ET andmevaldkonna sõnastik
 site_description: Avalik EN ↔ ET andmevaldkonna mõistete sõnastik
-site_url: https://example.github.io/terminoloogia/
-repo_name: your-org/terminoloogia
-repo_url: https://github.com/your-org/terminoloogia
+site_url: https://kristor.github.io/andmed-et-en/
+repo_name: KristoR/andmed-et-en
+repo_url: https://github.com/KristoR/andmed-et-en
 
 theme:
   name: material
   language: et
+  features:
+    - content.tabs.link
+    - navigation.tabs
 
 plugins:
   - search
 
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+
 nav:
-  - Home: index.md
-  - Contributing: contributing.md
+  - Sõnastik: index.md
+  - Panustamine: contributing.md

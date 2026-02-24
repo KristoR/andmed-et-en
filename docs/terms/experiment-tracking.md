@@ -26,7 +26,6 @@ Puudub
 
 Puudub
 
-## Arutelu
+---
 
-- Ava vaidluse korral teema [GitHub Discussionsis](../contributing.md#vaidlused-ja-github-discussions).
-- Soovituslik pealkiri: `Term: experiment tracking / katse jälgimine`
+[Soovita muudatust](https://github.com/KristoR/andmed-et-en/discussions/new?category=terminid&title=Term%3A+experiment+tracking+%2F+katse+j%C3%A4lgimine&body=%23%23+Termin%0A%0A-+%2A%2AEN%2A%2A%3A+experiment+tracking%0A-+%2A%2AET%2A%2A%3A+katse+j%C3%A4lgimine%0A%0A%23%23+Ettepanek%0A%0AKirjelda+siia+oma+ettepanekut+%28uus+t%C3%B5lge%2C+alternatiiv%2C+definitsioon%2C+parandus+jne%29.%0A%0A%23%23+Viited%0A%0ALisa+viited%2C+mis+toetavad+ettepanekut.%0A){ .md-button .md-button--primary }
