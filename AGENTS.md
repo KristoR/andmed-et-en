@@ -142,6 +142,15 @@ Soovituslik mudel:
    - python scripts/generate_glossary.py
 4) Käivita dev server:
    - mkdocs serve
+  
+## Git kehtestamise (_commit_) reeglid
+
+- Ära lisa kehtestamise kirjeldusse seansi URL-e (nt `https://claude.ai/...`)
+- Ära lisa `Co-Authored-By` ega muid AI atributsiooni ridu
+- Kasuta _Conventional Commits_ formaati: `tüüp: lühikirjeldus`
+- Pealkiri max 72 tähemärki
+- Kui muudatus on mittetriviaalne, lisa lühike selgitav lõik: mis muutus ja miks
+- Ära loo uut haru automaatselt, kui kasutaja pole seda selgesõnaliselt palunud
 
 ## Deploy (GitHub Pages)
 GitHub Actions peab:
