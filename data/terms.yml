@@ -1,54 +1,1808 @@
-﻿- en: "data warehouse"
-  et: "andmeladu"
+- en: data warehouse
+  et: andmeladu
   alt:
-    et: ["andmeait"]
+    et:
+    - andmeait
     en: []
-  definition: "Struktureeritud andmete keskne hoidla analüüsi ja aruandluse jaoks."
+  definition: Struktureeritud andmete keskne hoidla analüüsi ja aruandluse jaoks.
   references:
-    - title: "Wikipedia: Data warehouse"
-      url: "https://en.wikipedia.org/wiki/Data_warehouse"
-  example: "Andmeladu koondab müügiandmed eri süsteemidest ühte analüüsikihti."
-
-- en: "data lake"
-  et: "andmejärv"
+  - title: 'Wikipedia: Data warehouse'
+    url: https://en.wikipedia.org/wiki/Data_warehouse
+  example: Andmeladu koondab müügiandmed eri süsteemidest ühte analüüsikihti.
+- en: data lake
+  et: andmejärv
   alt:
     et: []
     en: []
-  definition: "Toor- ja poolstruktureeritud andmete hoidla, kus skeem rakendub lugemisel."
+  definition: Toor- ja poolstruktureeritud andmete hoidla, kus skeem rakendub lugemisel.
   references:
-    - title: "Wikipedia: Data lake"
-      url: "https://en.wikipedia.org/wiki/Data_lake"
-  example: "Andmejärv võimaldab talletada IoT toorvooge enne modelleerimist."
-
-- en: "feature engineering"
-  et: "tunnuste loomine"
+  - title: 'Wikipedia: Data lake'
+    url: https://en.wikipedia.org/wiki/Data_lake
+  example: Andmejärv võimaldab talletada IoT toorvooge enne modelleerimist.
+- en: feature engineering
+  et: tunnuste loomine
   alt:
-    et: ["tunnuste konstrueerimine"]
+    et:
+    - tunnuste konstrueerimine
     en: []
-  definition: "Masinõppes sisendtunnuste loomine ja teisendamine mudeli kvaliteedi parandamiseks."
+  definition: Masinõppes sisendtunnuste loomine ja teisendamine mudeli kvaliteedi
+    parandamiseks.
   references:
-    - title: "Wikipedia: Feature engineering"
-      url: "https://en.wikipedia.org/wiki/Feature_engineering"
-  example: "Tunnuste loomine lisas kuupäevast nädalapäeva ja hooajalisuse tunnused."
-
-- en: "dimensional model"
-  et: "dimensioonimudel"
+  - title: 'Wikipedia: Feature engineering'
+    url: https://en.wikipedia.org/wiki/Feature_engineering
+  example: Tunnuste loomine lisas kuupäevast nädalapäeva ja hooajalisuse tunnused.
+- en: dimensional model
+  et: dimensioonimudel
   alt:
-    et: ["dimensiooniline mudel"]
+    et:
+    - dimensiooniline mudel
     en: []
-  definition: "Andmeladude modelleerimisviis fakt- ja dimensioonitabelitega."
+  definition: Andmeladude modelleerimisviis fakt- ja dimensioonitabelitega.
   references:
-    - title: "Wikipedia: Dimensional modeling"
-      url: "https://en.wikipedia.org/wiki/Dimensional_modeling"
-  example: "Dimensioonimudel lihtsustab BI raportite päringuid."
-
-- en: "slowly changing dimension"
-  et: "aeglaselt muutuv dimensioon"
+  - title: 'Wikipedia: Dimensional modeling'
+    url: https://en.wikipedia.org/wiki/Dimensional_modeling
+  example: Dimensioonimudel lihtsustab BI raportite päringuid.
+- en: slowly changing dimension
+  et: aeglaselt muutuv dimensioon
   alt:
     et: []
-    en: ["SCD"]
-  definition: "Dimensioon, mille väärtused muutuvad ajas harva ja vajavad versioonihaldust."
+    en:
+    - SCD
+  definition: Dimensioon, mille väärtused muutuvad ajas harva ja vajavad versioonihaldust.
   references:
-    - title: "Kimball Group"
-      url: "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/slowly-changing-dimensions/"
-  example: "Kliendi aadressi muutus salvestatakse SCD Type 2 loogikaga."
+  - title: Kimball Group
+    url: https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/slowly-changing-dimensions/
+  example: Kliendi aadressi muutus salvestatakse SCD Type 2 loogikaga.
+- en: data lakehouse
+  et: andmejärvladu
+  alt:
+    et: []
+    en: []
+- en: data mesh
+  et: andmevõrk
+  alt:
+    et:
+    - andmevõrgustik
+    en: []
+- en: data fabric
+  et: andmekude
+  alt:
+    et: []
+    en: []
+- en: data mart
+  et: andmekiht
+  alt:
+    et:
+    - teemaandmeladu
+    en: []
+- en: data vault
+  et: andmehoidla
+  alt:
+    et: []
+    en: []
+- en: data catalog
+  et: andmekataloog
+  alt:
+    et: []
+    en: []
+- en: data store
+  et: andmehoidla
+  alt:
+    et: []
+    en: []
+- en: database
+  et: andmebaas
+  alt:
+    et: []
+    en: []
+- en: relational database
+  et: relatsiooniline andmebaas
+  alt:
+    et: []
+    en: []
+- en: graph database
+  et: graafandmebaas
+  alt:
+    et: []
+    en: []
+- en: time series database
+  et: aegridade andmebaas
+  alt:
+    et: []
+    en: []
+- en: document database
+  et: dokumendiandmebaas
+  alt:
+    et: []
+    en: []
+- en: key-value store
+  et: võtme-väärtuse hoidla
+  alt:
+    et: []
+    en: []
+- en: column store
+  et: veeruhoidla
+  alt:
+    et:
+    - veergpõhine andmebaas
+    en: []
+- en: object storage
+  et: objektihoidla
+  alt:
+    et: []
+    en: []
+- en: data repository
+  et: andmerepositorium
+  alt:
+    et: []
+    en: []
+- en: metadata repository
+  et: metaandmete repositoorium
+  alt:
+    et: []
+    en: []
+- en: data silo
+  et: andmesilod
+  alt:
+    et: []
+    en: []
+- en: data model
+  et: andmemudel
+  alt:
+    et: []
+    en: []
+- en: data modeling
+  et: andmete modelleerimine
+  alt:
+    et:
+    - andmemudelite loomine
+    en: []
+- en: star schema
+  et: täheskeem
+  alt:
+    et:
+    - tähtskeemiga mudel
+    en: []
+- en: snowflake schema
+  et: lumehelvese skeem
+  alt:
+    et: []
+    en: []
+- en: fact table
+  et: fakttabel
+  alt:
+    et:
+    - faktitabel
+    en: []
+- en: dimension table
+  et: dimensioonitabel
+  alt:
+    et: []
+    en: []
+- en: surrogate key
+  et: surrogaatvõti
+  alt:
+    et:
+    - asendvõti
+    en: []
+- en: natural key
+  et: naturaalne võti
+  alt:
+    et:
+    - loomulik võti
+    en: []
+- en: primary key
+  et: primaarvõti
+  alt:
+    et:
+    - esmane võti
+    en: []
+- en: foreign key
+  et: võõrvõti
+  alt:
+    et:
+    - välisvõti
+    en: []
+- en: composite key
+  et: liitvõti
+  alt:
+    et: []
+    en: []
+- en: entity-relationship model
+  et: olem-seos mudel
+  alt:
+    et: []
+    en: []
+- en: normalization
+  et: normaliseerimine
+  alt:
+    et: []
+    en: []
+- en: denormalization
+  et: denormaliseerimine
+  alt:
+    et: []
+    en: []
+- en: schema
+  et: skeem
+  alt:
+    et: []
+    en: []
+- en: schema-on-read
+  et: lugemisskeem
+  alt:
+    et: []
+    en: []
+- en: schema-on-write
+  et: kirjutamisskeem
+  alt:
+    et: []
+    en: []
+- en: data dictionary
+  et: andmesõnastik
+  alt:
+    et: []
+    en: []
+- en: ontology
+  et: ontoloogia
+  alt:
+    et: []
+    en: []
+- en: taxonomy
+  et: taksonoomia
+  alt:
+    et: []
+    en: []
+- en: knowledge graph
+  et: teadmusgraaf
+  alt:
+    et: []
+    en: []
+- en: ETL
+  et: ETL
+  alt:
+    et: []
+    en: []
+- en: ELT
+  et: ELT
+  alt:
+    et: []
+    en: []
+- en: data pipeline
+  et: andmetorustik
+  alt:
+    et:
+    - andmekonveier
+    en: []
+- en: data ingestion
+  et: andmete sisestamine
+  alt:
+    et:
+    - andmete vastuvõtt
+    en: []
+- en: data extraction
+  et: andmete eraldamine
+  alt:
+    et: []
+    en: []
+- en: data transformation
+  et: andmete teisendamine
+  alt:
+    et: []
+    en: []
+- en: data loading
+  et: andmete laadimine
+  alt:
+    et: []
+    en: []
+- en: change data capture
+  et: muudatusandmete hõive
+  alt:
+    et: []
+    en: []
+- en: CDC
+  et: CDC
+  alt:
+    et: []
+    en: []
+- en: batch processing
+  et: pakkimistöötlus
+  alt:
+    et:
+    - pakktöötlus
+    en: []
+- en: stream processing
+  et: vootöötlus
+  alt:
+    et:
+    - voogtöötlus
+    en: []
+- en: real-time processing
+  et: reaalajaline töötlus
+  alt:
+    et: []
+    en: []
+- en: data integration
+  et: andmete integreerimine
+  alt:
+    et:
+    - andmeintegratsioon
+    en: []
+- en: data migration
+  et: andmete migreerimine
+  alt:
+    et:
+    - andmemigratsioon
+    en: []
+- en: data replication
+  et: andmete replikeerimine
+  alt:
+    et: []
+    en: []
+- en: data synchronization
+  et: andmete sünkroniseerimine
+  alt:
+    et: []
+    en: []
+- en: workflow orchestration
+  et: töövoo orkestratsioon
+  alt:
+    et: []
+    en: []
+- en: data orchestration
+  et: andmete orkestratsioon
+  alt:
+    et: []
+    en: []
+- en: idempotency
+  et: idempotentsus
+  alt:
+    et: []
+    en: []
+- en: incremental load
+  et: inkrementaalne laadimine
+  alt:
+    et: []
+    en: []
+- en: full load
+  et: täislaadimine
+  alt:
+    et: []
+    en: []
+- en: data cleansing
+  et: andmete puhastamine
+  alt:
+    et:
+    - andmepuhastus
+    en: []
+- en: data wrangling
+  et: andmete korrastamine
+  alt:
+    et: []
+    en: []
+- en: web scraping
+  et: veebikraapimine
+  alt:
+    et:
+    - andmete kraapimine
+    en: []
+- en: OLAP
+  et: OLAP
+  alt:
+    et: []
+    en: []
+- en: OLTP
+  et: OLTP
+  alt:
+    et: []
+    en: []
+- en: business intelligence
+  et: ärianalüütika
+  alt:
+    et:
+    - äriteave
+    en: []
+- en: dashboard
+  et: armatuurlaud
+  alt:
+    et:
+    - töölaud
+    - esipaneel
+    en: []
+- en: KPI
+  et: KPI
+  alt:
+    et:
+    - tulemusnäitaja
+    en: []
+- en: ad-hoc query
+  et: ad hoc päring
+  alt:
+    et: []
+    en: []
+- en: report
+  et: aruanne
+  alt:
+    et:
+    - raport
+    en: []
+- en: data visualization
+  et: andmete visualiseerimine
+  alt:
+    et:
+    - andmevisualisatsioon
+    en: []
+- en: self-service analytics
+  et: iseteenindusanalüütika
+  alt:
+    et: []
+    en: []
+- en: drill-down
+  et: süvitsimine
+  alt:
+    et:
+    - läbimine
+    en: []
+- en: slice and dice
+  et: lõikamine ja tükeldamine
+  alt:
+    et: []
+    en: []
+- en: pivot table
+  et: risttabel
+  alt:
+    et:
+    - liigendtabel
+    en: []
+- en: metric
+  et: mõõdik
+  alt:
+    et:
+    - mõõtarv
+    en: []
+- en: measure
+  et: mõõt
+  alt:
+    et:
+    - mõõde
+    en: []
+- en: aggregation
+  et: agregatsioon
+  alt:
+    et:
+    - koondamine
+    en: []
+- en: data analysis
+  et: andmeanalüüs
+  alt:
+    et: []
+    en: []
+- en: exploratory data analysis
+  et: uuriv andmeanalüüs
+  alt:
+    et: []
+    en: []
+- en: descriptive analytics
+  et: kirjeldav analüütika
+  alt:
+    et: []
+    en: []
+- en: predictive analytics
+  et: ennustav analüütika
+  alt:
+    et: []
+    en: []
+- en: prescriptive analytics
+  et: ettekirjutav analüütika
+  alt:
+    et: []
+    en: []
+- en: diagnostic analytics
+  et: diagnostiline analüütika
+  alt:
+    et: []
+    en: []
+- en: cohort analysis
+  et: kohordianalüüs
+  alt:
+    et: []
+    en: []
+- en: funnel analysis
+  et: lehtrianalüüs
+  alt:
+    et: []
+    en: []
+- en: sentiment analysis
+  et: sentimentanalüüs
+  alt:
+    et:
+    - meelsusanalüüs
+    en: []
+- en: text analytics
+  et: tekstianalüütika
+  alt:
+    et: []
+    en: []
+- en: data governance
+  et: andmehaldus
+  alt:
+    et:
+    - andmete juhtimine
+    en: []
+- en: data quality
+  et: andmekvaliteet
+  alt:
+    et: []
+    en: []
+- en: data lineage
+  et: andmete päritolu
+  alt:
+    et:
+    - andmete pärinevus
+    en: []
+- en: data steward
+  et: andmehaldur
+  alt:
+    et: []
+    en: []
+- en: data owner
+  et: andmeomanik
+  alt:
+    et: []
+    en: []
+- en: master data
+  et: põhiandmed
+  alt:
+    et:
+    - masterandmed
+    en: []
+- en: master data management
+  et: põhiandmete haldus
+  alt:
+    et: []
+    en: []
+- en: metadata
+  et: metaandmed
+  alt:
+    et: []
+    en: []
+- en: metadata management
+  et: metaandmete haldus
+  alt:
+    et: []
+    en: []
+- en: data profiling
+  et: andmete profileerimine
+  alt:
+    et: []
+    en: []
+- en: data audit
+  et: andmeaudit
+  alt:
+    et: []
+    en: []
+- en: data compliance
+  et: andmete vastavus
+  alt:
+    et: []
+    en: []
+- en: data privacy
+  et: andmekaitse
+  alt:
+    et:
+    - privaatsus
+    en: []
+- en: data security
+  et: andmeturve
+  alt:
+    et: []
+    en: []
+- en: data retention
+  et: andmete säilitamine
+  alt:
+    et: []
+    en: []
+- en: data anonymization
+  et: andmete anonümiseerimine
+  alt:
+    et: []
+    en: []
+- en: data masking
+  et: andmete maskimine
+  alt:
+    et: []
+    en: []
+- en: data classification
+  et: andmete klassifitseerimine
+  alt:
+    et: []
+    en: []
+- en: data lifecycle
+  et: andmete elutsükkel
+  alt:
+    et: []
+    en: []
+- en: GDPR
+  et: GDPR
+  alt:
+    et:
+    - isikuandmete kaitse üldmäärus
+    en: []
+- en: personally identifiable information
+  et: isikuandmed
+  alt:
+    et:
+    - isikut tuvastav teave
+    en: []
+- en: data breach
+  et: andmeleke
+  alt:
+    et: []
+    en: []
+- en: machine learning
+  et: masinõpe
+  alt:
+    et: []
+    en: []
+- en: deep learning
+  et: süvaõpe
+  alt:
+    et: []
+    en: []
+- en: neural network
+  et: närvivõrk
+  alt:
+    et:
+    - neurovõrk
+    en: []
+- en: artificial neural network
+  et: tehisnärvivõrk
+  alt:
+    et: []
+    en: []
+- en: convolutional neural network
+  et: konvolutsiooniline närvivõrk
+  alt:
+    et: []
+    en: []
+- en: recurrent neural network
+  et: rekurrentne närvivõrk
+  alt:
+    et: []
+    en: []
+- en: supervised learning
+  et: juhendatud õpe
+  alt:
+    et: []
+    en: []
+- en: unsupervised learning
+  et: juhendamata õpe
+  alt:
+    et: []
+    en: []
+- en: semi-supervised learning
+  et: pooljuhendatud õpe
+  alt:
+    et: []
+    en: []
+- en: reinforcement learning
+  et: stiimulõpe
+  alt:
+    et:
+    - kinnitusõpe
+    en: []
+- en: transfer learning
+  et: ülekandõpe
+  alt:
+    et:
+    - siirdeõpe
+    en: []
+- en: feature selection
+  et: tunnuste valik
+  alt:
+    et: []
+    en: []
+- en: feature extraction
+  et: tunnuste eraldamine
+  alt:
+    et: []
+    en: []
+- en: feature store
+  et: tunnuste hoidla
+  alt:
+    et: []
+    en: []
+- en: training data
+  et: treenimisandmed
+  alt:
+    et:
+    - õppimisandmed
+    en: []
+- en: test data
+  et: testandmed
+  alt:
+    et: []
+    en: []
+- en: validation data
+  et: valideerimisandmed
+  alt:
+    et: []
+    en: []
+- en: overfitting
+  et: ülesobitamine
+  alt:
+    et:
+    - üleõppimine
+    en: []
+- en: underfitting
+  et: alasobitamine
+  alt:
+    et: []
+    en: []
+- en: cross-validation
+  et: ristvalideerimine
+  alt:
+    et: []
+    en: []
+- en: hyperparameter tuning
+  et: hüperparameetrite häälestamine
+  alt:
+    et: []
+    en: []
+- en: gradient descent
+  et: gradientlaskumine
+  alt:
+    et: []
+    en: []
+- en: backpropagation
+  et: tagasilevimine
+  alt:
+    et: []
+    en: []
+- en: loss function
+  et: kaofunktsioon
+  alt:
+    et: []
+    en: []
+- en: activation function
+  et: aktiveerimisfunktsioon
+  alt:
+    et: []
+    en: []
+- en: regularization
+  et: regulariseerimine
+  alt:
+    et: []
+    en: []
+- en: dropout
+  et: dropout
+  alt:
+    et:
+    - väljajätmine
+    en: []
+- en: batch normalization
+  et: partii normaliseerimine
+  alt:
+    et: []
+    en: []
+- en: ensemble method
+  et: ansambelmeetod
+  alt:
+    et: []
+    en: []
+- en: random forest
+  et: juhuslik mets
+  alt:
+    et: []
+    en: []
+- en: decision tree
+  et: otsustuspuu
+  alt:
+    et: []
+    en: []
+- en: gradient boosting
+  et: gradientvõimendamine
+  alt:
+    et: []
+    en: []
+- en: support vector machine
+  et: tugivektor-masin
+  alt:
+    et:
+    - tugivektormasin
+    en: []
+- en: k-nearest neighbors
+  et: k-lähima naabri meetod
+  alt:
+    et: []
+    en: []
+- en: naive Bayes
+  et: naiivne Bayes
+  alt:
+    et: []
+    en: []
+- en: logistic regression
+  et: logistiline regressioon
+  alt:
+    et: []
+    en: []
+- en: linear regression
+  et: lineaarne regressioon
+  alt:
+    et: []
+    en: []
+- en: model training
+  et: mudeli treenimine
+  alt:
+    et: []
+    en: []
+- en: model evaluation
+  et: mudeli hindamine
+  alt:
+    et: []
+    en: []
+- en: model deployment
+  et: mudeli juurutamine
+  alt:
+    et: []
+    en: []
+- en: model serving
+  et: mudeli teenindamine
+  alt:
+    et: []
+    en: []
+- en: MLOps
+  et: MLOps
+  alt:
+    et: []
+    en: []
+- en: AutoML
+  et: AutoML
+  alt:
+    et:
+    - automaatne masinõpe
+    en: []
+- en: explainability
+  et: seletatavus
+  alt:
+    et:
+    - tõlgendatavus
+    en: []
+- en: interpretability
+  et: tõlgendatavus
+  alt:
+    et: []
+    en: []
+- en: bias
+  et: nihe
+  alt:
+    et:
+    - kallutatus
+    - eelarvamus
+    en: []
+- en: fairness
+  et: õiglus
+  alt:
+    et: []
+    en: []
+- en: confusion matrix
+  et: segadus maatriks
+  alt:
+    et:
+    - klassifikatsioonimaatriks
+    en: []
+- en: precision
+  et: täpsus
+  alt:
+    et: []
+    en: []
+- en: recall
+  et: saagis
+  alt:
+    et:
+    - tundlikkus
+    en: []
+- en: F1 score
+  et: F1-skoor
+  alt:
+    et: []
+    en: []
+- en: ROC curve
+  et: ROC-kõver
+  alt:
+    et: []
+    en: []
+- en: AUC
+  et: AUC
+  alt:
+    et: []
+    en: []
+- en: artificial intelligence
+  et: tehisintellekt
+  alt:
+    et: []
+    en: []
+- en: natural language processing
+  et: loomuliku keele töötlus
+  alt:
+    et:
+    - loomuliku keele töötlemine
+    en: []
+- en: large language model
+  et: suur keelemudel
+  alt:
+    et: []
+    en: []
+- en: transformer
+  et: transformer
+  alt:
+    et:
+    - tähelepanumudel
+    en: []
+- en: attention mechanism
+  et: tähelepanumehhanism
+  alt:
+    et: []
+    en: []
+- en: tokenization
+  et: tokeniseerimine
+  alt:
+    et:
+    - sõnestamine
+    en: []
+- en: embedding
+  et: vektoresitus
+  alt:
+    et:
+    - manustamine
+    en: []
+- en: word embedding
+  et: sõnavektoresitus
+  alt:
+    et:
+    - sõna manustamine
+    en: []
+- en: generative AI
+  et: generatiivne tehisintellekt
+  alt:
+    et: []
+    en: []
+- en: prompt engineering
+  et: viiba projekteerimine
+  alt:
+    et: []
+    en: []
+- en: fine-tuning
+  et: peenhäälestamine
+  alt:
+    et:
+    - peenhäälestus
+    en: []
+- en: named entity recognition
+  et: nimeolemite tuvastamine
+  alt:
+    et: []
+    en: []
+- en: text classification
+  et: teksti klassifitseerimine
+  alt:
+    et: []
+    en: []
+- en: machine translation
+  et: masintõlge
+  alt:
+    et: []
+    en: []
+- en: speech recognition
+  et: kõnetuvastus
+  alt:
+    et: []
+    en: []
+- en: computer vision
+  et: arvutinägemine
+  alt:
+    et: []
+    en: []
+- en: image recognition
+  et: pildituvastus
+  alt:
+    et:
+    - kujutise tuvastamine
+    en: []
+- en: object detection
+  et: objektituvastus
+  alt:
+    et: []
+    en: []
+- en: generative adversarial network
+  et: generatiivne võistlusvõrk
+  alt:
+    et: []
+    en: []
+- en: chatbot
+  et: vestlusrobot
+  alt:
+    et: []
+    en: []
+- en: recommendation system
+  et: soovitussüsteem
+  alt:
+    et: []
+    en: []
+- en: knowledge base
+  et: teadmusbaas
+  alt:
+    et: []
+    en: []
+- en: regression
+  et: regressioon
+  alt:
+    et: []
+    en: []
+- en: classification
+  et: klassifitseerimine
+  alt:
+    et:
+    - klassifikatsioon
+    en: []
+- en: clustering
+  et: klasterdamine
+  alt:
+    et:
+    - klasteranalüüs
+    en: []
+- en: dimensionality reduction
+  et: dimensionaalsuse vähendamine
+  alt:
+    et: []
+    en: []
+- en: principal component analysis
+  et: peakomponentanalüüs
+  alt:
+    et: []
+    en: []
+- en: time series
+  et: aegread
+  alt:
+    et:
+    - aegrida
+    en: []
+- en: time series analysis
+  et: aegridade analüüs
+  alt:
+    et: []
+    en: []
+- en: forecasting
+  et: prognoosimine
+  alt:
+    et:
+    - ennustamine
+    en: []
+- en: anomaly detection
+  et: anomaaliate tuvastamine
+  alt:
+    et: []
+    en: []
+- en: outlier detection
+  et: erindite tuvastamine
+  alt:
+    et: []
+    en: []
+- en: A/B testing
+  et: A/B testimine
+  alt:
+    et:
+    - A/B test
+    en: []
+- en: hypothesis testing
+  et: hüpoteesi testimine
+  alt:
+    et: []
+    en: []
+- en: statistical significance
+  et: statistiline olulisus
+  alt:
+    et: []
+    en: []
+- en: p-value
+  et: p-väärtus
+  alt:
+    et: []
+    en: []
+- en: confidence interval
+  et: usaldusintervall
+  alt:
+    et: []
+    en: []
+- en: correlation
+  et: korrelatsioon
+  alt:
+    et: []
+    en: []
+- en: causation
+  et: põhjuslikkus
+  alt:
+    et: []
+    en: []
+- en: Bayesian inference
+  et: Bayesi järeldamine
+  alt:
+    et:
+    - Bayesi statistika
+    en: []
+- en: Monte Carlo simulation
+  et: Monte Carlo simulatsioon
+  alt:
+    et: []
+    en: []
+- en: sampling
+  et: valimi moodustamine
+  alt:
+    et:
+    - diskreetimist
+    en: []
+- en: probability distribution
+  et: tõenäosusjaotus
+  alt:
+    et: []
+    en: []
+- en: normal distribution
+  et: normaaljaotus
+  alt:
+    et: []
+    en: []
+- en: standard deviation
+  et: standardhälve
+  alt:
+    et: []
+    en: []
+- en: variance
+  et: dispersioon
+  alt:
+    et: []
+    en: []
+- en: mean
+  et: keskmine
+  alt:
+    et:
+    - aritmeetiline keskmine
+    en: []
+- en: median
+  et: mediaan
+  alt:
+    et: []
+    en: []
+- en: big data
+  et: suurandmed
+  alt:
+    et: []
+    en: []
+- en: distributed computing
+  et: hajusarvutus
+  alt:
+    et: []
+    en: []
+- en: distributed system
+  et: hajussüsteem
+  alt:
+    et: []
+    en: []
+- en: MapReduce
+  et: MapReduce
+  alt:
+    et: []
+    en: []
+- en: Apache Spark
+  et: Apache Spark
+  alt:
+    et: []
+    en: []
+- en: Apache Hadoop
+  et: Apache Hadoop
+  alt:
+    et: []
+    en: []
+- en: Apache Kafka
+  et: Apache Kafka
+  alt:
+    et: []
+    en: []
+- en: Apache Flink
+  et: Apache Flink
+  alt:
+    et: []
+    en: []
+- en: Apache Airflow
+  et: Apache Airflow
+  alt:
+    et: []
+    en: []
+- en: message queue
+  et: sõnumijärjekord
+  alt:
+    et: []
+    en: []
+- en: event streaming
+  et: sündmuste voogedastus
+  alt:
+    et: []
+    en: []
+- en: event-driven architecture
+  et: sündmusepõhine arhitektuur
+  alt:
+    et: []
+    en: []
+- en: data partitioning
+  et: andmete partitsioneerimine
+  alt:
+    et: []
+    en: []
+- en: sharding
+  et: šardimine
+  alt:
+    et:
+    - killustamine
+    en: []
+- en: horizontal scaling
+  et: horisontaalne skaleerimine
+  alt:
+    et: []
+    en: []
+- en: vertical scaling
+  et: vertikaalne skaleerimine
+  alt:
+    et: []
+    en: []
+- en: load balancing
+  et: koormuse tasakaalustamine
+  alt:
+    et: []
+    en: []
+- en: fault tolerance
+  et: tõrketaluvus
+  alt:
+    et: []
+    en: []
+- en: high availability
+  et: kõrge käideldavus
+  alt:
+    et: []
+    en: []
+- en: data locality
+  et: andmete lokaalsus
+  alt:
+    et: []
+    en: []
+- en: in-memory computing
+  et: mälupõhine arvutus
+  alt:
+    et: []
+    en: []
+- en: parallel processing
+  et: paralleeltöötlus
+  alt:
+    et: []
+    en: []
+- en: cloud computing
+  et: pilvandmetöötlus
+  alt:
+    et:
+    - pilvarvutus
+    en: []
+- en: data engineering
+  et: andmetehnika
+  alt:
+    et:
+    - andmete inseneeria
+    en: []
+- en: infrastructure as code
+  et: infrastruktuur koodina
+  alt:
+    et: []
+    en: []
+- en: containerization
+  et: konteineriseerimine
+  alt:
+    et: []
+    en: []
+- en: microservices
+  et: mikroteenused
+  alt:
+    et: []
+    en: []
+- en: serverless
+  et: serverivaba
+  alt:
+    et: []
+    en: []
+- en: API
+  et: API
+  alt:
+    et:
+    - rakendusliides
+    en: []
+- en: REST API
+  et: REST API
+  alt:
+    et:
+    - REST-liides
+    en: []
+- en: CI/CD
+  et: CI/CD
+  alt:
+    et:
+    - pidev integratsioon
+    en: []
+- en: DevOps
+  et: DevOps
+  alt:
+    et: []
+    en: []
+- en: DataOps
+  et: DataOps
+  alt:
+    et: []
+    en: []
+- en: version control
+  et: versioonihaldus
+  alt:
+    et: []
+    en: []
+- en: data versioning
+  et: andmete versioonihaldus
+  alt:
+    et: []
+    en: []
+- en: SQL
+  et: SQL
+  alt:
+    et: []
+    en: []
+- en: NoSQL
+  et: NoSQL
+  alt:
+    et: []
+    en: []
+- en: query optimization
+  et: päringu optimeerimine
+  alt:
+    et: []
+    en: []
+- en: index
+  et: indeks
+  alt:
+    et: []
+    en: []
+- en: join
+  et: ühend
+  alt:
+    et:
+    - liitmine
+    en: []
+- en: subquery
+  et: alampäring
+  alt:
+    et: []
+    en: []
+- en: view
+  et: vaade
+  alt:
+    et: []
+    en: []
+- en: materialized view
+  et: materialiseeritud vaade
+  alt:
+    et: []
+    en: []
+- en: stored procedure
+  et: salvestatud protseduur
+  alt:
+    et: []
+    en: []
+- en: trigger
+  et: päästik
+  alt:
+    et:
+    - trigger
+    en: []
+- en: transaction
+  et: transaktsioon
+  alt:
+    et: []
+    en: []
+- en: ACID
+  et: ACID
+  alt:
+    et: []
+    en: []
+- en: eventual consistency
+  et: lõplik konsistentsus
+  alt:
+    et: []
+    en: []
+- en: CAP theorem
+  et: CAP-teoreem
+  alt:
+    et: []
+    en: []
+- en: window function
+  et: aknafunktsioon
+  alt:
+    et: []
+    en: []
+- en: common table expression
+  et: ühistabel-avaldis
+  alt:
+    et:
+    - CTE
+    en: []
+- en: JSON
+  et: JSON
+  alt:
+    et: []
+    en: []
+- en: CSV
+  et: CSV
+  alt:
+    et: []
+    en: []
+- en: Parquet
+  et: Parquet
+  alt:
+    et: []
+    en: []
+- en: Avro
+  et: Avro
+  alt:
+    et: []
+    en: []
+- en: ORC
+  et: ORC
+  alt:
+    et: []
+    en: []
+- en: XML
+  et: XML
+  alt:
+    et: []
+    en: []
+- en: YAML
+  et: YAML
+  alt:
+    et: []
+    en: []
+- en: data serialization
+  et: andmete serialiseerimine
+  alt:
+    et: []
+    en: []
+- en: data format
+  et: andmevorming
+  alt:
+    et: []
+    en: []
+- en: schema evolution
+  et: skeemi evolutsioon
+  alt:
+    et: []
+    en: []
+- en: data compression
+  et: andmete tihendamine
+  alt:
+    et: []
+    en: []
+- en: data science
+  et: andmeteadus
+  alt:
+    et: []
+    en: []
+- en: data-driven
+  et: andmepõhine
+  alt:
+    et: []
+    en: []
+- en: data literacy
+  et: andmekirjaoskus
+  alt:
+    et:
+    - andmepädevus
+    en: []
+- en: data democratization
+  et: andmete demokratiseerimine
+  alt:
+    et: []
+    en: []
+- en: data product
+  et: andmetoode
+  alt:
+    et: []
+    en: []
+- en: data contract
+  et: andmeleping
+  alt:
+    et: []
+    en: []
+- en: data observability
+  et: andmete jälgitavus
+  alt:
+    et: []
+    en: []
+- en: data reliability
+  et: andmete usaldusväärsus
+  alt:
+    et: []
+    en: []
+- en: data freshness
+  et: andmete värskus
+  alt:
+    et: []
+    en: []
+- en: data completeness
+  et: andmete täielikkus
+  alt:
+    et: []
+    en: []
+- en: data accuracy
+  et: andmete täpsus
+  alt:
+    et: []
+    en: []
+- en: data consistency
+  et: andmete kooskõlalisus
+  alt:
+    et:
+    - andmete konsistentsus
+    en: []
+- en: reproducibility
+  et: reprodutseeritavus
+  alt:
+    et:
+    - korratavus
+    en: []
+- en: experiment tracking
+  et: katse jälgimine
+  alt:
+    et: []
+    en: []
+- en: open data
+  et: avaandmed
+  alt:
+    et: []
+    en: []
+- en: linked data
+  et: lingitud andmed
+  alt:
+    et:
+    - seotud andmed
+    en: []
+- en: semantic web
+  et: semantiline veeb
+  alt:
+    et: []
+    en: []
+- en: RDF
+  et: RDF
+  alt:
+    et: []
+    en: []
+- en: SPARQL
+  et: SPARQL
+  alt:
+    et: []
+    en: []
+- en: data portal
+  et: andmeportaal
+  alt:
+    et: []
+    en: []
+- en: API endpoint
+  et: API lõpp-punkt
+  alt:
+    et: []
+    en: []
+- en: data sharing
+  et: andmete jagamine
+  alt:
+    et: []
+    en: []
+- en: interoperability
+  et: koostalitlusvõime
+  alt:
+    et: []
+    en: []
+- en: data standard
+  et: andmestandard
+  alt:
+    et: []
+    en: []
+- en: access control
+  et: juurdepääsukontroll
+  alt:
+    et: []
+    en: []
+- en: role-based access control
+  et: rollipõhine juurdepääsukontroll
+  alt:
+    et: []
+    en: []
+- en: encryption
+  et: krüpteerimine
+  alt:
+    et: []
+    en: []
+- en: authentication
+  et: autentimine
+  alt:
+    et:
+    - tuvastamine
+    en: []
+- en: authorization
+  et: autoriseerimine
+  alt:
+    et:
+    - volitamine
+    en: []
+- en: data encryption
+  et: andmete krüpteerimine
+  alt:
+    et: []
+    en: []
+- en: hashing
+  et: räsimine
+  alt:
+    et: []
+    en: []
+- en: cybersecurity
+  et: küberturvalisus
+  alt:
+    et: []
+    en: []
+- en: Internet of Things
+  et: asjade internet
+  alt:
+    et: []
+    en: []
+- en: IoT
+  et: IoT
+  alt:
+    et:
+    - asjade internet
+    en: []
+- en: edge computing
+  et: servaarvutus
+  alt:
+    et:
+    - äärearvutus
+    en: []
+- en: sensor data
+  et: anduriandmed
+  alt:
+    et: []
+    en: []
+- en: telemetry
+  et: telemeetria
+  alt:
+    et: []
+    en: []
+- en: digital twin
+  et: digitaalne kaksik
+  alt:
+    et: []
+    en: []
+- en: dataset
+  et: andmestik
+  alt:
+    et:
+    - andmehulk
+    en: []
+- en: data point
+  et: andmepunkt
+  alt:
+    et: []
+    en: []
+- en: record
+  et: kirje
+  alt:
+    et: []
+    en: []
+- en: field
+  et: väli
+  alt:
+    et: []
+    en: []
+- en: attribute
+  et: atribuut
+  alt:
+    et:
+    - omadus
+    en: []
+- en: variable
+  et: muutuja
+  alt:
+    et: []
+    en: []
+- en: label
+  et: silt
+  alt:
+    et:
+    - märgend
+    en: []
+- en: annotation
+  et: annotatsioon
+  alt:
+    et:
+    - märgendus
+    en: []
+- en: ground truth
+  et: tõene väärtus
+  alt:
+    et:
+    - põhitõde
+    en: []
+- en: benchmark
+  et: võrdlusanalüüs
+  alt:
+    et:
+    - võrdlustest
+    en: []
+- en: baseline
+  et: baastase
+  alt:
+    et:
+    - lähtetase
+    en: []
+- en: latency
+  et: latentsus
+  alt:
+    et:
+    - viivitus
+    en: []
+- en: throughput
+  et: läbilaskevõime
+  alt:
+    et: []
+    en: []
+- en: scalability
+  et: skaleeritavus
+  alt:
+    et:
+    - mastaabitavus
+    en: []
+- en: data drift
+  et: andmete triivimine
+  alt:
+    et: []
+    en: []
+- en: concept drift
+  et: kontseptsiooni triivimine
+  alt:
+    et: []
+    en: []
+- en: batch
+  et: pakk
+  alt:
+    et:
+    - partii
+    en: []
+- en: pipeline
+  et: torustik
+  alt:
+    et:
+    - konveier
+    en: []
+- en: workflow
+  et: töövoog
+  alt:
+    et: []
+    en: []
+- en: DAG
+  et: DAG
+  alt:
+    et:
+    - suunatud atsükliline graaf
+    en: []
+- en: idempotent
+  et: idempotentne
+  alt:
+    et: []
+    en: []
