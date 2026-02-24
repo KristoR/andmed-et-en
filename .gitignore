@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# MkDocs build output
+site/
+
+# Thesis harvesting cache
+data/harvest_cache/

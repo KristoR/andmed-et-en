@@ -13,3 +13,8 @@ dev = [
   "mkdocs>=1.6.1",
   "mkdocs-material>=9.6.14",
 ]
+harvest = [
+  "requests>=2.31",
+  "lxml>=5.0",
+  "spacy>=3.7",
+]
