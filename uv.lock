@@ -950,6 +950,7 @@ dependencies = [
 dev = [
     { name = "mkdocs" },
     { name = "mkdocs-material" },
+    { name = "pymdown-extensions" },
 ]
 harvest = [
     { name = "lxml" },
@@ -964,6 +965,7 @@ requires-dist = [{ name = "pyyaml", specifier = ">=6.0.2" }]
 dev = [
     { name = "mkdocs", specifier = ">=1.6.1" },
     { name = "mkdocs-material", specifier = ">=9.6.14" },
+    { name = "pymdown-extensions", specifier = ">=10.20.1" },
 ]
 harvest = [
     { name = "lxml", specifier = ">=5.0" },
