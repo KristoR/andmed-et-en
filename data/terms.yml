@@ -70,11 +70,15 @@
     et: []
     en: []
 - en: data mart
-  et: andmekiht
+  et: andmeait
   alt:
     et:
     - teemaandmeladu
+    - andmekiht
     en: []
+  references:
+  - title: 'Vikipeedia: Andmeait'
+    url: https://et.wikipedia.org/wiki/Andmeait
 - en: data vault
   et: andmehoidla
   alt:
@@ -275,11 +279,15 @@
     - andmekonveier
     en: []
 - en: data ingestion
-  et: andmete sisestamine
+  et: andmete valmendamine
   alt:
     et:
-    - andmete vastuvõtt
+    - andmevalmendus
+    - andmete sisestamine
     en: []
+  references:
+  - title: 'ÕS 2018: valmendus'
+    url: https://eki.ee/dict/qs/index.cgi?Q=valmendus
 - en: data extraction
   et: andmete eraldamine
   alt:
@@ -306,11 +314,14 @@
     et: []
     en: []
 - en: batch processing
-  et: pakkimistöötlus
+  et: pakktöötlus
   alt:
     et:
-    - pakktöötlus
+    - pakkimistöötlus
     en: []
+  references:
+  - title: 'EKI ITS: pakktöötlus'
+    url: https://eki.ee/dict/its/index.cgi?Q=batch+processing
 - en: stream processing
   et: vootöötlus
   alt:
@@ -407,6 +418,7 @@
   alt:
     et:
     - töölaud
+    - juhtpaneel
     - esipaneel
     en: []
 - en: KPI
@@ -647,8 +659,12 @@
 - en: deep learning
   et: süvaõpe
   alt:
-    et: []
+    et:
+    - sügavõpe
     en: []
+  references:
+  - title: 'datasci.ee: Närvivõrkude ja masinõppe sõnastik'
+    url: http://datasci.ee/masinoppe-sonastik/
 - en: neural network
   et: närvivõrk
   alt:
@@ -692,11 +708,15 @@
     - kinnitusõpe
     en: []
 - en: transfer learning
-  et: ülekandõpe
+  et: siirdeõpe
   alt:
     et:
-    - siirdeõpe
+    - ülekandõpe
+    - ülekandeõpe
     en: []
+  references:
+  - title: 'datasci.ee: Närvivõrkude ja masinõppe sõnastik'
+    url: http://datasci.ee/masinoppe-sonastik/
 - en: feature selection
   et: tunnuste valik
   alt:
@@ -755,10 +775,14 @@
     et: []
     en: []
 - en: backpropagation
-  et: tagasilevimine
+  et: tagasilevi
   alt:
-    et: []
+    et:
+    - tagasilevimine
     en: []
+  references:
+  - title: 'datasci.ee: Närvivõrkude ja masinõppe sõnastik'
+    url: http://datasci.ee/masinoppe-sonastik/
 - en: loss function
   et: kaofunktsioon
   alt:
@@ -781,10 +805,14 @@
     - väljajätmine
     en: []
 - en: batch normalization
-  et: partii normaliseerimine
+  et: ploki normaliseerimine
   alt:
-    et: []
+    et:
+    - partii normaliseerimine
     en: []
+  references:
+  - title: 'datasci.ee: Närvivõrkude ja masinõppe sõnastik'
+    url: http://datasci.ee/masinoppe-sonastik/
 - en: ensemble method
   et: ansambelmeetod
   alt:
@@ -793,8 +821,12 @@
 - en: random forest
   et: juhuslik mets
   alt:
-    et: []
+    et:
+    - otsustusmets
     en: []
+  references:
+  - title: 'Vikipeedia: Otsustusmets'
+    url: https://et.wikipedia.org/wiki/Otsustusmets
 - en: decision tree
   et: otsustuspuu
   alt:
@@ -886,7 +918,7 @@
     et: []
     en: []
 - en: confusion matrix
-  et: segadus maatriks
+  et: segadusmaatriks
   alt:
     et:
     - klassifikatsioonimaatriks
@@ -968,9 +1000,10 @@
     et: []
     en: []
 - en: prompt engineering
-  et: viiba projekteerimine
+  et: promptimine
   alt:
-    et: []
+    et:
+    - viiba projekteerimine
     en: []
 - en: fine-tuning
   et: peenhäälestamine
@@ -1139,7 +1172,7 @@
   et: valimi moodustamine
   alt:
     et:
-    - diskreetimist
+    - diskreetimine
     en: []
 - en: probability distribution
   et: tõenäosusjaotus
@@ -1734,9 +1767,10 @@
     - märgendus
     en: []
 - en: ground truth
-  et: tõene väärtus
+  et: tegelik väärtus
   alt:
     et:
+    - etalonväärtus
     - põhitõde
     en: []
 - en: benchmark
