@@ -29,17 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug check TalTech dc:description presence
-        run: |
-          curl -sS -m 20 "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=ListRecords&metadataPrefix=oai_dc&from=2026-01-01" -o /tmp/body.xml
-          echo "description count:"
-          grep -c "dc:description" /tmp/body.xml || true
-          echo "abstract count:"
-          grep -c "dc:abstract" /tmp/body.xml || true
-          echo "--- first record ---"
-          head -c 6000 /tmp/body.xml
-          exit 1
-
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
 
