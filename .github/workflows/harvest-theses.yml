@@ -29,6 +29,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug probe TalTech endpoints
+        run: |
+          for path in "/oai/request?verb=Identify" "/server/oai/request?verb=Identify" "/oai?verb=Identify" "/dspace-oai/request?verb=Identify" "/oai/driver?verb=Identify" "/" "/robots.txt" "/sitemap.xml"; do
+            echo "=== https://digikogu.taltech.ee${path} ==="
+            curl -sS -m 15 -o /tmp/body.txt -w "HTTP %{http_code} (%{url_effective})\n" "https://digikogu.taltech.ee${path}" || echo "curl failed"
+            head -c 400 /tmp/body.txt
+            echo
+            echo
+          done
+
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
 
