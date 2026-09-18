@@ -32,9 +32,7 @@ jobs:
       - name: Debug probe TalTech endpoints
         run: |
           for url in \
-            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=Identify" \
-            "http://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=Identify" \
-            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=ListSets" \
+            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=ListRecords&metadataPrefix=oai_dc&from=2026-01-01" \
             ; do
             echo "=== ${url} ==="
             curl -sS -m 15 -L -o /tmp/body.txt -w "HTTP %{http_code} (%{url_effective})\n" "${url}" || echo "curl failed"
