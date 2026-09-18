@@ -31,10 +31,14 @@ jobs:
 
       - name: Debug probe TalTech endpoints
         run: |
-          for path in "/oai/request?verb=Identify" "/server/oai/request?verb=Identify" "/oai?verb=Identify" "/dspace-oai/request?verb=Identify" "/oai/driver?verb=Identify" "/" "/robots.txt" "/sitemap.xml"; do
-            echo "=== https://digikogu.taltech.ee${path} ==="
-            curl -sS -m 15 -o /tmp/body.txt -w "HTTP %{http_code} (%{url_effective})\n" "https://digikogu.taltech.ee${path}" || echo "curl failed"
-            head -c 400 /tmp/body.txt
+          for url in \
+            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=Identify" \
+            "http://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=Identify" \
+            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=ListSets" \
+            ; do
+            echo "=== ${url} ==="
+            curl -sS -m 15 -L -o /tmp/body.txt -w "HTTP %{http_code} (%{url_effective})\n" "${url}" || echo "curl failed"
+            head -c 1000 /tmp/body.txt
             echo
             echo
           done
