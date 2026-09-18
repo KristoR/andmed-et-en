@@ -29,19 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug probe TalTech endpoints
-        run: |
-          for url in \
-            "https://ws.lib.ttu.ee/digikogu-oai/oai2.aspx?verb=ListRecords&metadataPrefix=oai_dc&from=2026-01-01" \
-            ; do
-            echo "=== ${url} ==="
-            curl -sS -m 15 -L -o /tmp/body.txt -w "HTTP %{http_code} (%{url_effective})\n" "${url}" || echo "curl failed"
-            head -c 1000 /tmp/body.txt
-            echo
-            echo
-          done
-          exit 1
-
       - name: Setup uv
         uses: astral-sh/setup-uv@v5
 
