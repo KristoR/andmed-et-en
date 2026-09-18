@@ -64,7 +64,7 @@ UNIVERSITIES: dict[str, UniversityConfig] = {
     "taltech": UniversityConfig(
         key="taltech",
         name="TalTech",
-        base_url="https://digikogu.taltech.ee/oai/request",
+        base_url="https://digikogu.taltech.ee/server/oai/request",
     ),
     "tlu": UniversityConfig(
         key="tlu",
