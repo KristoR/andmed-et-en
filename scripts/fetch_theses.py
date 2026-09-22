@@ -206,7 +206,7 @@ def main() -> None:
         records = parse_records(raw_records, university=uni_key)
         all_records.extend(records)
         thesis_counts[uni_key] = len(records)
-        logging.info("Got %d thesis records with abstracts from %s", len(records), uni.name)
+        logging.info("Got %d usable thesis records from %s", len(records), uni.name)
 
         # Update state for this university
         if "universities" not in state:
