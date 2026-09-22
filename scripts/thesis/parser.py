@@ -171,7 +171,9 @@ def parse_records(
 ) -> list[ThesisRecord]:
     """Parse a list of OAI-PMH record elements into ThesisRecords.
 
-    Filters out deleted records and records without abstracts.
+    Filters out deleted records and records with no usable text signal
+    (neither an abstract nor subject keywords - some repositories, like
+    TalTech's OAI-PMH feed, only expose the latter).
     """
     records: list[ThesisRecord] = []
     skipped = 0
@@ -181,14 +183,13 @@ def parse_records(
         if rec is None:
             skipped += 1
             continue
-        # Only keep records that have at least one abstract
-        if not rec.abstract_en and not rec.abstract_et:
+        if not rec.abstract_en and not rec.abstract_et and not rec.subjects:
             skipped += 1
             continue
         records.append(rec)
 
     logger.info(
-        "Parsed %d records with abstracts (%d skipped) for %s",
+        "Parsed %d usable records (%d skipped) for %s",
         len(records),
         skipped,
         university or "unknown",

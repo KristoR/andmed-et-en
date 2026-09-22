@@ -42,6 +42,14 @@ GENERIC_PHRASES = {
     "master thesis", "bachelor thesis", "doctoral thesis",
 }
 
+# Thesis-type/collection boilerplate that shows up as a dc:subject on nearly
+# every record in some repositories - not a data-domain term, just noise.
+SUBJECT_NOISE_PHRASES = {
+    "doctoral theses", "master theses", "bachelor theses", "theses",
+    "doktoritööd", "magistritööd", "bakalaureusetööd", "väitekirjad",
+    "lõputööd", "rakenduskõrgkooli lõputööd",
+}
+
 
 @dataclass
 class TermMatch:
@@ -106,10 +114,14 @@ def extract_curated_terms(
                     key = ref.en.lower()
                     found_in_record.add(key)
 
-        # Also search subjects/keywords
+        # Also search subjects/keywords (the only signal available for
+        # records with no abstract, e.g. TalTech's OAI-PMH feed)
         for subject in record.subjects:
             subject_lower = subject.lower()
             for ref, pattern in en_patterns:
+                if pattern.search(subject_lower):
+                    found_in_record.add(ref.en.lower())
+            for ref, hint, pattern in et_hint_patterns:
                 if pattern.search(subject_lower):
                     found_in_record.add(ref.en.lower())
 
@@ -215,6 +227,21 @@ def extract_nlp_terms(
                     parts = ngram.split()
                     if all(len(p) >= 3 for p in parts):
                         found_phrases.add(ngram)
+
+        # Subject keywords (controlled vocabulary) - the only signal for
+        # records with no abstract text to run NLP chunking on.
+        for subject in record.subjects:
+            phrase = subject.strip().lower()
+            if not phrase or phrase in SUBJECT_NOISE_PHRASES:
+                continue
+            words = phrase.split()
+            if len(words) > 4:
+                continue
+            if phrase in GENERIC_PHRASES:
+                continue
+            if len(words) == 1 and (words[0] in STOPWORDS_EN or len(words[0]) < 4):
+                continue
+            found_phrases.add(phrase)
 
         # Update counts
         for phrase in found_phrases:
