@@ -12,7 +12,7 @@ armatuurlaud
 
 ## Alternatiivid
 
-- EE: töölaud, esipaneel
+- EE: töölaud, juhtpaneel, esipaneel
 
 ## Definitsioon
 

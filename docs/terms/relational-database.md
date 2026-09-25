@@ -12,7 +12,7 @@ relatsiooniline andmebaas
 
 ## Alternatiivid
 
-- Puudub
+- EE: relatsioonandmebaas
 
 ## Definitsioon
 
@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [EKI ITS: relatsioonandmebaas](https://eki.ee/dict/its/index.cgi?Q=relational+database)
 
 ## Näide
 
