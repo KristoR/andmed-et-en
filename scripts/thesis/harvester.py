@@ -69,7 +69,12 @@ UNIVERSITIES: dict[str, UniversityConfig] = {
     "tlu": UniversityConfig(
         key="tlu",
         name="Tallinn University",
-        base_url="https://www.etera.ee/oai",
+        base_url="https://www.etera.ee/api/oai2",
+        # ETERA's ListSets only exposes generic type/collection classifiers,
+        # not subject-based ones, so CS-keyword set discovery never matches
+        # anything here. Target thesis types directly instead of harvesting
+        # the whole (mostly unrelated) digital library.
+        sets=["classification:37", "classification:43"],  # Üliõpilastöö, Doktoritöö
     ),
 }
 
