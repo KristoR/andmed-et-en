@@ -169,9 +169,14 @@ def main() -> None:
         else:
             from_date = DEFAULT_FROM_DATE
 
-        # Discover CS/data science sets
+        # Discover CS/data science sets, unless the university config
+        # already pins specific sets (e.g. when CS-keyword set discovery
+        # can't work because the repository's sets aren't subject-based)
         cached_sets = uni_state.get("sets")
-        if cached_sets and not args.full:
+        if uni.sets:
+            set_specs = uni.sets
+            logging.info("Using %d configured sets for %s", len(set_specs), uni.name)
+        elif cached_sets and not args.full:
             set_specs = cached_sets
             logging.info("Using %d cached sets for %s", len(set_specs), uni.name)
         else:

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 import time
 from dataclasses import dataclass, field
 
@@ -69,13 +70,24 @@ UNIVERSITIES: dict[str, UniversityConfig] = {
     "tlu": UniversityConfig(
         key="tlu",
         name="Tallinn University",
-        base_url="https://www.etera.ee/oai",
+        base_url="https://www.etera.ee/api/oai2",
+        # ETERA's ListSets only exposes generic type/collection classifiers,
+        # not subject-based ones, so CS-keyword set discovery never matches
+        # anything here. Target thesis types directly instead of harvesting
+        # the whole (mostly unrelated) digital library.
+        sets=["classification:37", "classification:43"],  # Üliõpilastöö, Doktoritöö
     ),
 }
 
 REQUEST_DELAY_SECONDS = 2.0
 MAX_RETRIES = 3
 RETRY_BACKOFF_BASE = 2.0
+
+# Control bytes that are illegal in XML 1.0 but sometimes leak into metadata
+# from digitization systems (e.g. ETERA) - strip them rather than let the
+# whole response, and everything already harvested via resumption tokens,
+# fail to parse over a single bad record.
+_ILLEGAL_XML_BYTES_RE = re.compile(rb"[\x00-\x08\x0B\x0C\x0E-\x1F]")
 
 
 def _oai_request(
@@ -89,7 +101,8 @@ def _oai_request(
         try:
             resp = requests.get(base_url, params=params, timeout=timeout)
             resp.raise_for_status()
-            return etree.fromstring(resp.content)
+            content = _ILLEGAL_XML_BYTES_RE.sub(b"", resp.content)
+            return etree.fromstring(content)
         except (requests.RequestException, etree.XMLSyntaxError) as exc:
             if attempt == MAX_RETRIES - 1:
                 raise

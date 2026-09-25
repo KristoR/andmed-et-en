@@ -114,6 +114,18 @@ def extract_curated_terms(
                     key = ref.en.lower()
                     found_in_record.add(key)
 
+        # Also search titles (the only signal at all for records with
+        # neither an abstract nor subjects, e.g. Tallinn University's
+        # ETERA feed)
+        if record.title_en:
+            for ref, pattern in en_patterns:
+                if pattern.search(record.title_en):
+                    found_in_record.add(ref.en.lower())
+        if record.title_et:
+            for ref, hint, pattern in et_hint_patterns:
+                if pattern.search(record.title_et):
+                    found_in_record.add(ref.en.lower())
+
         # Also search subjects/keywords (the only signal available for
         # records with no abstract, e.g. TalTech's OAI-PMH feed)
         for subject in record.subjects:
@@ -192,41 +204,57 @@ def extract_nlp_terms(
     phrase_thesis_count: Counter[str] = Counter()
     phrase_thesis_refs: dict[str, list[dict[str, str]]] = {}
 
+    def _en_noun_chunks(text: str) -> set[str]:
+        """Extract 2-4 word noun chunks from English text via spaCy."""
+        phrases: set[str] = set()
+        doc = nlp(text)
+        for chunk in doc.noun_chunks:
+            phrase = chunk.text.strip().lower()
+            # Filter: 2-4 words, not purely stopwords, not generic
+            words = phrase.split()
+            if len(words) < 2 or len(words) > 4:
+                continue
+            if phrase in GENERIC_PHRASES:
+                continue
+            # At least one content word (not a stopword)
+            content_words = [w for w in words if w not in STOPWORDS_EN]
+            if not content_words:
+                continue
+            # Skip if starts/ends with a stopword-only prefix
+            if words[0] in {"the", "a", "an", "this", "that", "these", "those"}:
+                phrase = " ".join(words[1:])
+                if len(phrase.split()) < 2:
+                    continue
+            phrases.add(phrase)
+        return phrases
+
+    def _et_ngrams(text: str) -> set[str]:
+        """Extract 2-3 word n-grams from Estonian text (no spaCy model)."""
+        phrases: set[str] = set()
+        et_words = re.findall(r"[a-zõäöüšž]+", text.lower())
+        for n in (2, 3):
+            for i in range(len(et_words) - n + 1):
+                ngram = " ".join(et_words[i : i + n])
+                # Basic filtering: each word at least 3 chars
+                if all(len(p) >= 3 for p in ngram.split()):
+                    phrases.add(ngram)
+        return phrases
+
     for record in records:
         found_phrases: set[str] = set()
 
-        # English NLP extraction
+        # English NLP extraction (abstract, or title when there's no
+        # abstract, e.g. Tallinn University's ETERA feed)
         if record.abstract_en:
-            doc = nlp(record.abstract_en)
-            for chunk in doc.noun_chunks:
-                phrase = chunk.text.strip().lower()
-                # Filter: 2-4 words, not purely stopwords, not generic
-                words = phrase.split()
-                if len(words) < 2 or len(words) > 4:
-                    continue
-                if phrase in GENERIC_PHRASES:
-                    continue
-                # At least one content word (not a stopword)
-                content_words = [w for w in words if w not in STOPWORDS_EN]
-                if not content_words:
-                    continue
-                # Skip if starts/ends with a stopword-only prefix
-                if words[0] in {"the", "a", "an", "this", "that", "these", "those"}:
-                    phrase = " ".join(words[1:])
-                    if len(phrase.split()) < 2:
-                        continue
-                found_phrases.add(phrase)
+            found_phrases |= _en_noun_chunks(record.abstract_en)
+        if record.title_en:
+            found_phrases |= _en_noun_chunks(record.title_en)
 
         # Estonian n-gram extraction (simple approach since no spaCy model)
         if record.abstract_et:
-            et_words = re.findall(r"[a-zõäöüšž]+", record.abstract_et.lower())
-            for n in (2, 3):
-                for i in range(len(et_words) - n + 1):
-                    ngram = " ".join(et_words[i : i + n])
-                    # Basic filtering: each word at least 3 chars
-                    parts = ngram.split()
-                    if all(len(p) >= 3 for p in parts):
-                        found_phrases.add(ngram)
+            found_phrases |= _et_ngrams(record.abstract_et)
+        if record.title_et:
+            found_phrases |= _et_ngrams(record.title_et)
 
         # Subject keywords (controlled vocabulary) - the only signal for
         # records with no abstract text to run NLP chunking on.

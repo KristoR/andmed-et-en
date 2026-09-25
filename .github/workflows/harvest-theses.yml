@@ -59,7 +59,15 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/terms.yml; then
+          # git diff ignores untracked files, and candidate_terms.yml has
+          # never been committed before, so use git status instead - it
+          # reports both modified tracked files and new untracked ones.
+          if [ -z "$(git status --porcelain -- data/terms.yml)" ]; then
+            echo "terms_changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "terms_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          if [ -z "$(git status --porcelain -- data/terms.yml data/candidate_terms.yml)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -70,16 +78,19 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Lisa lõputöödest avastatud terminid"
-          title: "Lisa lõputöödest avastatud terminid (${{ github.run_id }})"
+          commit-message: "Uuenda lõputöödest avastatud termineid"
+          title: "${{ steps.changes.outputs.terms_changed == 'true' && 'Lisa lõputöödest avastatud terminid' || 'Uuenda kandidaatterminite loendit ülevaatuseks' }} (${{ github.run_id }})"
           body: |
             ## Automaatne terminite avastamine
 
             See PR on loodud automaatselt lõputööde analüüsi põhjal.
 
+            ${{ steps.changes.outputs.terms_changed == 'true' && '`data/terms.yml` sisaldab uusi automaatselt edendatud kõrge usaldusväärsusega termineid.' || 'Sõnastikku (`data/terms.yml`) automaatselt ei muudetud - ükski leitud termin ei ületanud automaatse edenduse lävendit. `data/candidate_terms.yml` on värskendatud käsitsi ülevaatamiseks.' }}
+
             ### Muudatused
             - Tõmmatud uued lõputööde metaandmed Eesti ülikoolide repositooriumidest
-            - Edendatud kõrge usaldusväärsusega kandidaatterminid sõnastikku
+            - Edendatud kõrge usaldusväärsusega kandidaatterminid sõnastikku (kui neid leiti)
+            - Värskendatud `data/candidate_terms.yml` käsitsi ülevaatamiseks
             - Genereeritud sõnastiku lehed uuendatud
 
             ### Lõputööde otsingu väljund
@@ -88,7 +99,8 @@ jobs:
             ```
 
             ### Ülevaatuse kontrollnimekiri
-            - [ ] Vaata üle edendatud terminid `data/terms.yml` failis
+            - [ ] Vaata üle edendatud terminid `data/terms.yml` failis (kui neid lisati)
+            - [ ] Sirvi `data/candidate_terms.yml` läbivaatamata kandidaatide jaoks
             - [ ] Kontrolli, et eestikeelsed tõlked on korrektsed
             - [ ] Eemalda terminid, mis ei kuulu andmevaldkonna sõnastikku
           branch: automated/thesis-terms
