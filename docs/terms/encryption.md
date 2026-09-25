@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [AKIT: encryption](https://akit.cyber.ee/term/1)
 
 ## Näide
 

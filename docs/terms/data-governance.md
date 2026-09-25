@@ -12,7 +12,7 @@ andmehaldus
 
 ## Alternatiivid
 
-- EE: andmete juhtimine
+- EE: andmekorraldus, andmete juhtimine
 
 ## Definitsioon
 
@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Statistikaamet: Andmehalduse mõisted](https://stat.ee/et/statistikaamet/andmehaldus/andmehalduse-moisted)
+- [Kratid: Mis on andmehaldus](https://www.kratid.ee/andmehaldus)
 
 ## Näide
 

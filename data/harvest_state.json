@@ -1,0 +1,29 @@
+{
+  "universities": {
+    "ut": {
+      "last_harvest_date": "2026-09-25",
+      "sets": [
+        "com_10062_14970",
+        "com_10062_1782",
+        "com_10062_14971",
+        "com_10062_14972",
+        "col_10062_118179"
+      ],
+      "total_records_harvested": 3739
+    },
+    "taltech": {
+      "last_harvest_date": "2026-09-25",
+      "sets": [],
+      "total_records_harvested": 1485
+    },
+    "tlu": {
+      "last_harvest_date": "2026-09-25",
+      "sets": [
+        "classification:37",
+        "classification:43"
+      ],
+      "total_records_harvested": 14400
+    }
+  },
+  "last_run": "2026-09-25T17:20:45.136958"
+}

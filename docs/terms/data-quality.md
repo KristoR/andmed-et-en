@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Statistikaamet: Andmekvaliteedi juhis](https://www.stat.ee/sites/default/files/2023-06/AH_juhis_andmekvaliteet_1.3_090523.pdf)
+- [Kratid: Andmehalduse juhised](https://www.kratid.ee/andmehalduse-juhised)
 
 ## Näide
 
