@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Statistikaamet: Andmehalduse mõisted](https://stat.ee/et/statistikaamet/andmehaldus/andmehalduse-moisted)
+- [Kratid: Andmehalduse juhised](https://www.kratid.ee/andmehalduse-juhised)
 
 ## Näide
 

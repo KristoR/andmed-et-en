@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [AKIT: data steward](https://akit.cyber.ee/term/2172)
+- [Statistikaamet: Andmehalduse mõisted](https://stat.ee/et/statistikaamet/andmehaldus/andmehalduse-moisted)
 
 ## Näide
 

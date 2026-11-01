@@ -12,7 +12,7 @@ andmete täpsus
 
 ## Alternatiivid
 
-- Puudub
+- EE: andmete õigsus
 
 ## Definitsioon
 
@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [AKIT: data accuracy](https://akit.cyber.ee/term/4822)
+- [Statistikaamet: Andmekvaliteedi juhis](https://www.stat.ee/sites/default/files/2023-06/AH_juhis_andmekvaliteet_1.3_090523.pdf)
 
 ## Näide
 

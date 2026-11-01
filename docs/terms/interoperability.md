@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Digiriik: Koostoime raamistik](https://digiriik.eesti.ee/koostoimeraamistik/4-semantiline-koostoime-ja-andmed)
 
 ## Näide
 

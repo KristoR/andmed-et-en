@@ -12,7 +12,7 @@ juhuslik mets
 
 ## Alternatiivid
 
-- Puudub
+- EE: otsustusmets
 
 ## Definitsioon
 
@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Vikipeedia: Otsustusmets](https://et.wikipedia.org/wiki/Otsustusmets)
 
 ## Näide
 

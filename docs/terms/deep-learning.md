@@ -12,7 +12,7 @@ süvaõpe
 
 ## Alternatiivid
 
-- Puudub
+- EE: sügavõpe
 
 ## Definitsioon
 
@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [datasci.ee: Närvivõrkude ja masinõppe sõnastik](http://datasci.ee/masinoppe-sonastik/)
 
 ## Näide
 

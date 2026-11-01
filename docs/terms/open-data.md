@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [Kratid: Avaandmed](https://www.kratid.ee/avaandmed)
 
 ## Näide
 
