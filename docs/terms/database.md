@@ -20,7 +20,7 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [EKI ITS: andmebaas](https://eki.ee/dict/its/index.cgi?Q=database)
 
 ## Näide
 

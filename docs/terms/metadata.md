@@ -20,7 +20,8 @@ Puudub
 
 ## Viited
 
-- Puudub
+- [EKI: Haridussõnastik – metaandmed](http://www.eki.ee/dict/haridus/index.cgi?Q=metaandmed)
+- [Statistikaamet: Andmehalduse mõisted](https://stat.ee/et/statistikaamet/andmehaldus/andmehalduse-moisted)
 
 ## Näide
 

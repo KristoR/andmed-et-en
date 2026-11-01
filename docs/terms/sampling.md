@@ -12,7 +12,7 @@ valimi moodustamine
 
 ## Alternatiivid
 
-- EE: diskreetimist
+- EE: diskreetimine
 
 ## Definitsioon
 
